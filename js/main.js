@@ -1,12 +1,21 @@
+// Signal JS is active so CSS can enable scroll-reveal hiding (else content always shows)
+document.documentElement.classList.add('js');
+
+// Safe localStorage — throws in private mode / blocked storage on some mobile browsers
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch {} }
+};
+
 // ── Theme toggle ──
 const themeToggle = document.getElementById('themeToggle');
-const saved = localStorage.getItem('theme') || 'dark';
+const saved = store.get('theme') || 'dark';
 applyTheme(saved);
 
 themeToggle?.addEventListener('click', () => {
   const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
   applyTheme(next);
-  localStorage.setItem('theme', next);
+  store.set('theme', next);
 });
 
 function applyTheme(theme) {
@@ -34,13 +43,18 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 
 // ── Scroll reveal ──
 const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-scale');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-}, { threshold: 0.12 });
-revealEls.forEach((el, i) => {
-  el.style.transitionDelay = `${(i % 4) * 80}ms`;
-  observer.observe(el);
-});
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach((el, i) => {
+    el.style.transitionDelay = `${(i % 4) * 80}ms`;
+    observer.observe(el);
+  });
+} else {
+  // No IntersectionObserver support — show everything immediately
+  revealEls.forEach(el => el.classList.add('visible'));
+}
 
 // ── Product filter ──
 const chips = document.querySelectorAll('.filter-chip');
