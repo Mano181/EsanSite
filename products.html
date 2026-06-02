@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact — Esan Electric</title>
+  <title>Products — Esan Electric</title>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
@@ -16,11 +16,11 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="tel:+919999999999" class="btn-ghost">📞 Call</a>
+      <a href="tel:+917200523519" class="btn-ghost">📞 Call</a>
       <a href="contact.html" class="btn-teal">Get Quote</a>
       <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
     </div>
@@ -29,93 +29,181 @@
 </nav>
 
 <section class="page-hero">
-  <div class="section-eyebrow">Get in Touch</div>
-  <h1>Let's Talk Business</h1>
-  <p>Wholesale enquiries, bulk pricing, product availability — we're ready to help.</p>
+  <div class="section-eyebrow">Product Catalog</div>
+  <h1>Our Full Range</h1>
+  <p>Wholesale-priced electrical products for every project. Browse by category and send an enquiry.</p>
 </section>
 
-<section class="contact-section">
+<section class="products-section">
   <div class="container">
-    <div class="contact-layout">
+    <div class="filter-wrap">
+      <button class="filter-chip active" data-filter="all">All Products</button>
+      <button class="filter-chip" data-filter="ceiling-fans">🌀 Ceiling Fans</button>
+      <button class="filter-chip" data-filter="other-fans">🌬️ Exhaust &amp; Table Fans</button>
+      <button class="filter-chip" data-filter="led-lights">💡 LED Lights</button>
+      <button class="filter-chip" data-filter="wiring">🔌 Wiring &amp; Switches</button>
+    </div>
 
-      <!-- Left -->
-      <div class="contact-left reveal-left">
-        <h2>We're here<br>to help.</h2>
-        <p>Reach us by phone, WhatsApp or the enquiry form — we respond within the same business day.</p>
+    <div class="products-grid">
 
-        <div class="info-card">
-          <div class="i-icon">📍</div>
-          <div>
-            <h4>Address</h4>
-            <p>No. 1, Electrical Market Street<br>Your City — 600001, Tamil Nadu</p>
-          </div>
+      <div class="product-card reveal" data-category="ceiling-fans">
+        <div class="p-thumb"><img src="images/Products/ceiling-fans/standard-fan.png" alt="Standard Ceiling Fan 48" style="width:100%;height:100%;object-fit:contain;padding:12px;"/></div>
+        <div class="p-body">
+          <div class="p-tag">Ceiling Fans</div>
+          <h3>Standard Ceiling Fan 48"</h3>
+          <p>Energy-efficient 3-blade fan for medium rooms. Multiple colour options available.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
         </div>
-        <div class="info-card">
-          <div class="i-icon">📞</div>
-          <div>
-            <h4>Phone</h4>
-            <a href="tel:+919999999999">+91 99999 99999</a>
-          </div>
-        </div>
-        <div class="info-card">
-          <div class="i-icon">✉️</div>
-          <div>
-            <h4>Email</h4>
-            <a href="mailto:info@esanelectric.com">info@esanelectric.com</a>
-          </div>
-        </div>
-        <div class="info-card">
-          <div class="i-icon">🕐</div>
-          <div>
-            <h4>Business Hours</h4>
-            <p>Mon – Sat: 9:00 AM – 7:00 PM<br>Sunday: Closed</p>
-          </div>
-        </div>
-
-        <div class="quick-contact">
-          <a href="https://wa.me/919999999999" target="_blank" class="qc-btn wa">💬 WhatsApp Us</a>
-          <a href="tel:+919999999999" class="qc-btn ph">📞 Call Now</a>
-        </div>
-
-        <div class="map-box">📍 Add Google Maps embed here</div>
       </div>
 
-      <!-- Right -->
-      <div class="form-card reveal">
-        <h3>Send an Enquiry</h3>
-        <p>Fill in your details and we'll get back to you with pricing and availability.</p>
-        <form id="inquiryForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" name="name" placeholder="Your name" required/>
-            </div>
-            <div class="form-group">
-              <label>Phone Number</label>
-              <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" name="email" placeholder="your@email.com"/>
-          </div>
-          <div class="form-group">
-            <label>Product Interest</label>
-            <select name="product">
-              <option value="">— Select a category —</option>
-              <option value="ceiling-fans">Ceiling Fans</option>
-              <option value="other-fans">Exhaust &amp; Table Fans</option>
-              <option value="led-lights">LED Lights &amp; Bulbs</option>
-              <option value="wiring">Wiring &amp; Switches</option>
-              <option value="other">General Enquiry</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea name="message" placeholder="Describe your requirement, quantity needed, or any questions..." required></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Send Enquiry →</button>
-        </form>
+      <div class="product-card reveal" data-category="ceiling-fans">
+        <div class="p-thumb">🌀</div>
+        <div class="p-body">
+          <div class="p-tag">Ceiling Fans</div>
+          <h3>Premium BLDC Ceiling Fan 52"</h3>
+          <p>Brushless DC motor — ultra energy-saving, runs at just 28W. Remote included.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="ceiling-fans">
+        <div class="p-thumb">🌀</div>
+        <div class="p-body">
+          <div class="p-tag">Ceiling Fans</div>
+          <h3>Decorative Designer Fan</h3>
+          <p>Stylish ceiling fan for living rooms. Available in brass and chrome finish.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="ceiling-fans">
+        <div class="p-thumb">🌀</div>
+        <div class="p-body">
+          <div class="p-tag">Ceiling Fans</div>
+          <h3>High-Speed Ceiling Fan</h3>
+          <p>Max air delivery for halls, workshops and warehouses.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="other-fans">
+        <div class="p-thumb">🌬️</div>
+        <div class="p-body">
+          <div class="p-tag">Exhaust &amp; Table Fans</div>
+          <h3>Exhaust Fan 6"</h3>
+          <p>Compact, silent exhaust fan for bathrooms and kitchens.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="other-fans">
+        <div class="p-thumb">🌬️</div>
+        <div class="p-body">
+          <div class="p-tag">Exhaust &amp; Table Fans</div>
+          <h3>Exhaust Fan 12"</h3>
+          <p>Heavy-duty industrial exhaust for factories and commercial kitchens.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="other-fans">
+        <div class="p-thumb">🌬️</div>
+        <div class="p-body">
+          <div class="p-tag">Exhaust &amp; Table Fans</div>
+          <h3>Table Fan 16"</h3>
+          <p>3-speed portable table fan with oscillation for personal and office use.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="other-fans">
+        <div class="p-thumb">🌬️</div>
+        <div class="p-body">
+          <div class="p-tag">Exhaust &amp; Table Fans</div>
+          <h3>Pedestal Fan 18"</h3>
+          <p>Height-adjustable with wide oscillation for shops and open spaces.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="led-lights">
+        <div class="p-thumb">💡</div>
+        <div class="p-body">
+          <div class="p-tag">LED Lights</div>
+          <h3>LED Bulb 9W</h3>
+          <p>B22/E27 LED bulb, warm &amp; cool white. 25,000hr lifespan.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="led-lights">
+        <div class="p-thumb">💡</div>
+        <div class="p-body">
+          <div class="p-tag">LED Lights</div>
+          <h3>LED Tube Light 20W</h3>
+          <p>2ft and 4ft flicker-free LED tubes for homes and offices.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="led-lights">
+        <div class="p-thumb">💡</div>
+        <div class="p-body">
+          <div class="p-tag">LED Lights</div>
+          <h3>LED Downlight 12W</h3>
+          <p>Slim recessed panel for false ceilings. 3 colour temp options.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="led-lights">
+        <div class="p-thumb">💡</div>
+        <div class="p-body">
+          <div class="p-tag">LED Lights</div>
+          <h3>LED Batten 36W</h3>
+          <p>Surface-mount for warehouses and industrial use. IP65 rated.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="wiring">
+        <div class="p-thumb">🔌</div>
+        <div class="p-body">
+          <div class="p-tag">Wiring &amp; Switches</div>
+          <h3>Electrical Wire 1.5 sq mm</h3>
+          <p>FR PVC insulated copper wire, ISI marked. Per metre and per roll.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="wiring">
+        <div class="p-thumb">🔌</div>
+        <div class="p-body">
+          <div class="p-tag">Wiring &amp; Switches</div>
+          <h3>Modular Switch Plate</h3>
+          <p>Single, 2-module &amp; 4-module switch plates in white and grey.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="wiring">
+        <div class="p-thumb">🔌</div>
+        <div class="p-body">
+          <div class="p-tag">Wiring &amp; Switches</div>
+          <h3>MCB Single Pole 16A</h3>
+          <p>ISI certified miniature circuit breaker for home distribution boards.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="wiring">
+        <div class="p-thumb">🔌</div>
+        <div class="p-body">
+          <div class="p-tag">Wiring &amp; Switches</div>
+          <h3>PVC Conduit Pipe</h3>
+          <p>Rigid and flexible conduit for wiring protection. 20mm, 25mm, 32mm.</p>
+          <a href="contact.html" class="btn-enquire">Enquire Now</a>
+        </div>
       </div>
 
     </div>
@@ -139,7 +227,7 @@
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="tel:+919999999999">📞 +91 99999 99999</a></li>
+        <li><a href="tel:+917200523519">📞 +91 72005 23519</a></li>
         <li><a href="mailto:info@esanelectric.com">✉️ info@esanelectric.com</a></li>
       </ul>
     </div>
@@ -151,8 +239,8 @@
 </footer>
 
 <div class="floating-btns">
-  <a href="tel:+919999999999" class="float-btn ph" data-tip="Call Us">📞</a>
-  <a href="https://wa.me/919999999999" target="_blank" class="float-btn wa" data-tip="WhatsApp">💬</a>
+  <a href="tel:+917200523519" class="float-btn ph" data-tip="Call Us">📞</a>
+  <a href="https://wa.me/917200523519" target="_blank" class="float-btn wa" data-tip="WhatsApp">💬</a>
 </div>
 <script src="js/main.js"></script>
 </body>
