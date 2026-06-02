@@ -99,13 +99,16 @@ body::before{
     radial-gradient(ellipse 40% 30% at 50% 50%, rgba(45,212,191,0.04) 0%, transparent 70%);
 }
 
-/* ── Scroll reveal ── */
-.reveal{opacity:0;transform:translateY(36px);transition:opacity 0.7s var(--transition),transform 0.7s var(--transition);}
-.reveal.visible{opacity:1;transform:none;}
-.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.7s var(--transition),transform 0.7s var(--transition);}
-.reveal-left.visible{opacity:1;transform:none;}
-.reveal-scale{opacity:0;transform:scale(0.92);transition:opacity 0.6s var(--transition),transform 0.6s var(--transition);}
-.reveal-scale.visible{opacity:1;transform:none;}
+/* ── Scroll reveal (progressive enhancement: only hidden when JS is active) ── */
+html.js .reveal{opacity:0;transform:translateY(36px);transition:opacity 0.7s var(--transition),transform 0.7s var(--transition);}
+html.js .reveal.visible{opacity:1;transform:none;}
+html.js .reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.7s var(--transition),transform 0.7s var(--transition);}
+html.js .reveal-left.visible{opacity:1;transform:none;}
+html.js .reveal-scale{opacity:0;transform:scale(0.92);transition:opacity 0.6s var(--transition),transform 0.6s var(--transition);}
+html.js .reveal-scale.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){
+  html.js .reveal,html.js .reveal-left,html.js .reveal-scale{opacity:1!important;transform:none!important;}
+}
 
 /* ── Utility ── */
 .container{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
